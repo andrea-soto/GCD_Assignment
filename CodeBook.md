@@ -2,73 +2,83 @@
 
 This Code Book is part of the Getting and Cleaning Data Course Projec submission.
 
-It describes the variables, data, and work performed to clean up the data submitted.
+It describes the variables, data, and work performed to clean up the data and create the final 'tidyData.txt' file.
 
 ---
 
-## Data
+## The Raw Data Set
 
-The raw data was taken from "Human Activity Recognition Using Smart Phones" experiment which collected data from the accelerometers from the Samsung Galaxy S smartphone.
+The raw data was distributed in 6 files as following:
 
-The experiment consisted of 6 activities and 
+* X_test.txt 		- Contains the measurments of the test group
+* X_train.txt 		- Contains the measurments of the training group
+* y_test.txt 		- Contains the Activity ID of the test group 
+* y_train.txt 		- Contains the Activity ID of the training group 
+* subject_test.txt 	- Contains the Subject ID of the test group
+* subject_train.txt 	- Contains the Subject ID of the training group
 
-
+The description of the activities is contained in the file 'activity_labels.txt', and the column names for the measurment data ('X_' files) is contained in the file 'features.txt'.
 
 ---
 
 ## Cleaned Data Set
 
+The cleaned data set is found in the file 'dataSet.txt'. This file is created with the 'run_Analysis.R' scrip and is used to create the final 'tidyData.txt' file.
+
+The following operatins were performed to the raw data to obtain the cleaned data:
+1. Merge the training and test measurment data
+2. Extract the data for the mean and standart deviation (called mean() and std())
+3. Add the activity description to each record
+4. Adds the subject ID to each record
+
+### Summary of Variables
+
 Number of Rows:		10,299
 Number of Columns:	68
 
-Each row coresponds to one record and each columns corresponds ti 
-
-# Summary of Variables
-Columns 1 to 66 contain the mean and standard deviation of 33 measured variables.
-
-The following variables were measured on the three axis (X,Y,Z)
-* tBodyAcc
-* tGravityAcc
-* tBodyAccJerk
-* tBodyGyro
-* tBodyGyroJerk
-* fBodyAcc
-* fBodyAccJerk
-* fBodyGyro
-
-Column 67 contains the description of the activity.
-Column 68 contains the subject identifier
-
-
-
-
-Columns 1 to 66:	Measured data over 	
-
+Columns 1 to 66 
+ Formant: Numeric
+ Content: Mean and standard deviation of 33 measured variables.
+Column 67 
+ Format:  Character
+ Content: Activity description. There are 6 possible activities:
+	* LAYING
+	* SITTING
+	* STANDING
+	* WALKING
+	* WALKING_DOWNSTAIRS
+	* WALKING_UPSTAIRS
+Column 68 
+ Format:  Numeric
+ Content: Subject identifier from 1 to 30.
 
 ---
 
-## Course Content
+## Tidy Data Set
 
-* Track motivation
-* Getting help
-* Introduction to basic tools
-  * R 
-  * Rstudio
-  * Git
-  * Github
-* Types of data questions
-* Steps in a data analysis
-* Putting the science in data science
+The tidy data set is found the in the file 'tidyData.txt' and contains the average measurment of each Activity and Subject. The tidy data was created with the cleaned data described above.
 
----
+The following operatins were performed to the cleaned data to obtain the tidy data:
+1. Melted to create a single row for each Activity-Subject-Measurment record in the cleaned data
+2. Summarized with the dcast() function to average the measurments by Activity and Subject
 
-## Lecture Materials
+### Summary of Variables
 
-Lecture videos will be released weekly and will be available for the week and thereafter. You are welcome to view them at your convenience. Accompanying each video lecture will be a PDF copy of the slides and a link to an HTML5 version of the slides. 
+Number of Rows:		180
+Number of Columns:	68
 
----
-
-## Weekly quizzes
-
-### Quiz 1
-
+Column 1 
+ Format:  Numeric
+ Content: Subject identifier from 1 to 30.
+Column 2 
+ Format:  Character
+ Content: Activity description. There are 6 possible activities:
+	* LAYING
+	* SITTING
+	* STANDING
+	* WALKING
+	* WALKING_DOWNSTAIRS
+	* WALKING_UPSTAIRS
+Columns 3 to 68
+ Formant: Numeric
+ Content: Average of the mean and standard deviation of 33 measured variables.

@@ -1,45 +1,54 @@
-## Read me
+## Read Me
 
-This document explains how all of the scripts work and how they are connected
-
----
-
-## Getting and Cleaning Data Course Projec
-
-[Jeff Leek](http://biostat.jhsph.edu/~jleek/) 
-
+This document explains how the scripts run_Analysis.R works and how it answers the 'Getting and Cleaning Data Course Projec' questions
 
 ---
 
-## Course Description
+## Projec Description and Submitted Files
 
-In this course you will get an introduction to the main tools and ideas
-in the data scientists toolbox. The course gives an overview of the data, questions, and tools that data analysts and data scientists work with. There are two components to this course. The first is a conceptual introduction to the ideas behind turning data into actionable knowledge. The second is a practical introduction to the tools that will be used in the program like version control, markdown, git, Github, R, and Rstudio. 
+The purpose of the project is to demonstrate the student's ability to collect, work with, and clean a data set. 
 
+The goal is to prepare tidy data that can be used for later analysis. The data used comes from the accelerometers from the Samsung Galaxy S smartphone. A full description of the data from the site is available [here] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
----
+Assignment tasks: 
 
-## Course Content
-
-* Track motivation
-* Getting help
-* Introduction to basic tools
-  * R 
-  * Rstudio
-  * Git
-  * Github
-* Types of data questions
-* Steps in a data analysis
-* Putting the science in data science
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 ---
 
-## Lecture Materials
+## Files Submitted
 
-Lecture videos will be released weekly and will be available for the week and thereafter. You are welcome to view them at your convenience. Accompanying each video lecture will be a PDF copy of the slides and a link to an HTML5 version of the slides. 
+This repository contains the following files submitted for this project:
+
+1. A script file called 'run_Analysis.R' which contains the code that performs the analysis
+2. A data file called 'tidyData.txt' which contains the tidy data set as described in Point 5 of the Assignment
+3. A data file called 'dataSet.txt' which contains the extracted data as described in Points 1-4 of the Assignment
+4. A file called 'CodeBook.md' that describes the variables, the data, and the work performed to clean up the data
+5. A file called 'ReadMe.md' that explains the assignment submission and how the script works.
 
 ---
 
-## Weekly quizzes
+## run_Analysis.R Description
 
-### Quiz 1
+The script performs the following tasks in sequential order:
+
+1. Check if data files exist in current working directory. If the data files do no exist, download and unzip all the files to the working directory
+2. Read the following data into R (if data frames already exist in global environment, do not read them again):
+     * X_test.txt
+     * y_test.txt
+     * subject_test.txt
+     * X_train.txt
+     * y_train.txt
+     * subject_train.txt
+     * features.txt
+     * activity_labels.txt
+3. Task 1: Merge the Training and Test set to create one single data set. This is achieved with the rbind() function.
+4. Task 2: Extract the mean and standard deviation measurements. This is achieved by first finding all the columns that contain 'mean()' and 'std()' and then subsetting the data with this columns.
+5. Task 3: Name the activities in the data set with the description. First, the activity codes from training and testing are merged. A auxiliary ordering number is added to the data as the merge() function will change the order of the rows. Then, the data codes are merged with the activity descriptions. The activity data is re-organized to the original order and then added to the measurement data.
+6. Task 4: Label the data set by adding descriptive names to the columns. The columns are named with the descriptions found in the 'features.txt' file
+7. Task 5: Creates a second, independent tidy data set with the average of each variable for each activity and each subject. First, the subject data from the training and test sets is merged and added to the measurement data. This data is saved in the 'dataSet.txt' file. 
+Finally, the tidy data set is created by melting the data from 'dataSet.txt' which contains the Activity and Subject for each measurment, and then casting the data to find the mean of each measurment. The final, tidy data is saved in the file 'tidyData.txt'.
