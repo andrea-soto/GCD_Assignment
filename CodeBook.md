@@ -35,7 +35,7 @@ The following operatins were performed to the raw data to obtain the cleaned dat
   1. Columns 1 to 66  
     Formant: Numeric  
     Content: Mean and standard deviation of 33 measured variables.  
-  2. Column 67
+  2. Column 67  
     Format:  Character  
     Content: Activity description. There are 6 possible activities:
     * LAYING
@@ -44,7 +44,7 @@ The following operatins were performed to the raw data to obtain the cleaned dat
     * WALKING
     * WALKING_DOWNSTAIRS
     * WALKING_UPSTAIRS
-  3. Column 68
+  3. Column 68  
     Format:  Numeric  
     Content: Subject identifier from 1 to 30  
 
@@ -65,7 +65,7 @@ The following operatins were performed to the cleaned data to obtain the tidy da
   1. Column 1  
     Format:  Numeric  
     Content: Subject identifier from 1 to 30  
-  2. Column 2
+  2. Column 2  
     Format:  Character  
     Content: Activity description. There are 6 possible activities:
     * LAYING
