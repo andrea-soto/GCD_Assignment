@@ -33,7 +33,7 @@ The following operatins were performed to the raw data to obtain the cleaned dat
 * Number of Rows: 10,299
 * Number of Columns: 68
 
-  1. Columns 1 to 66  
+1. Columns 1 to 66  
   Formant: Numeric  
   Content: Mean and standard deviation of 33 measured variables.  
 2. Column 67
@@ -64,7 +64,7 @@ The following operatins were performed to the cleaned data to obtain the tidy da
 * Number of Rows: 180
 * Number of Columns: 68
 
-  1. Column 1  
+1. Column 1  
   Format:  Numeric  
   Content: Subject identifier from 1 to 30  
 2. Column 2
