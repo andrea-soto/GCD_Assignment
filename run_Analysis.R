@@ -84,13 +84,15 @@ run_Analysis <- function() {
      # Add Subject IDs to data set
      dataSet <- cbind(dataSet, sData)
      
-     write.csv(dataSet, file="dataSet.csv")
+     write.table(dataSet, file="dataSet.txt")
      
      # Create final tidy data with the average of each variable by Activity and Subject
+     
+     
      library(reshape2)
      tidyData <- melt(dataSet, c("Subject", "Activity"))
      tidyData <- dcast(tidyData, Subject + Activity ~ variable, mean)
      
-     write.csv(tidyData, file="tidyData.csv")
+     write.table(tidyData, file="tidyData.txt")
      
 }
