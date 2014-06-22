@@ -1,4 +1,4 @@
-## Read Me
+# Read Me
 
 This document explains how the script 'run_Analysis.R' works and how it answers the 'Getting and Cleaning Data Course Projec' questions
 
@@ -10,7 +10,7 @@ The purpose of the project is to demonstrate the student's ability to collect, w
 
 The goal is to prepare tidy data that can be used for later analysis. The data used comes from the accelerometers from the Samsung Galaxy S smartphone. A full description of the data from the site is available [here] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
-# Assignment tasks
+### Assignment tasks
  
 Create one R script called run_analysis.R that does the following:
 
