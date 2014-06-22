@@ -32,22 +32,21 @@ The following operatins were performed to the raw data to obtain the cleaned dat
 
 * Number of Rows: 10,299
 * Number of Columns: 68
-
-1. Columns 1 to 66  
-  Formant: Numeric  
-  Content: Mean and standard deviation of 33 measured variables.  
-2. Column 67
-  Format:  Character  
-  Content: Activity description. There are 6 possible activities:
-  * LAYING
-  * SITTING
-  * STANDING
-  * WALKING
-  * WALKING_DOWNSTAIRS
-  * WALKING_UPSTAIRS
-3. Column 68
-  Format:  Numeric  
-  Content: Subject identifier from 1 to 30  
+  1. Columns 1 to 66  
+    Formant: Numeric  
+    Content: Mean and standard deviation of 33 measured variables.  
+  2. Column 67
+    Format:  Character  
+    Content: Activity description. There are 6 possible activities:
+    * LAYING
+    * SITTING
+    * STANDING
+    * WALKING
+    * WALKING_DOWNSTAIRS
+    * WALKING_UPSTAIRS
+  3. Column 68
+    Format:  Numeric  
+    Content: Subject identifier from 1 to 30  
 
 ---
 
@@ -63,19 +62,18 @@ The following operatins were performed to the cleaned data to obtain the tidy da
 
 * Number of Rows: 180
 * Number of Columns: 68
-
-1. Column 1  
-  Format:  Numeric  
-  Content: Subject identifier from 1 to 30  
-2. Column 2
-  Format:  Character  
-  Content: Activity description. There are 6 possible activities:
-  * LAYING
-  * SITTING
-  * STANDING
-  * WALKING
-  * WALKING_DOWNSTAIRS
-  * WALKING_UPSTAIRS
-3. Columns 3 to 68  
-  Formant: Numeric  
-  Content: Average of the mean and standard deviation of 33 measured variables
+  1. Column 1  
+    Format:  Numeric  
+    Content: Subject identifier from 1 to 30  
+  2. Column 2
+    Format:  Character  
+    Content: Activity description. There are 6 possible activities:
+    * LAYING
+    * SITTING
+    * STANDING
+    * WALKING
+    * WALKING_DOWNSTAIRS
+    * WALKING_UPSTAIRS
+  3. Columns 3 to 68  
+    Formant: Numeric  
+    Content: Average of the mean and standard deviation of 33 measured variables
