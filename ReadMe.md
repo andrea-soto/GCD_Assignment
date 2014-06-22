@@ -1,16 +1,18 @@
 ## Read Me
 
-This document explains how the scripts run_Analysis.R works and how it answers the 'Getting and Cleaning Data Course Projec' questions
+This document explains how the script 'run_Analysis.R' works and how it answers the 'Getting and Cleaning Data Course Projec' questions
 
 ---
 
-## Projec Description and Submitted Files
+## Projec Description
 
 The purpose of the project is to demonstrate the student's ability to collect, work with, and clean a data set. 
 
-The goal is to prepare tidy data that can be used for later analysis. The data used comes from the accelerometers from the Samsung Galaxy S smartphone. A full description of the data from the site is available [here] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+The goal is to prepare tidy data that can be used for later analysis. The data used comes from the accelerometers from the Samsung Galaxy S smartphone. A full description of the data from the site is available [here] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
-Assignment tasks: 
+# Assignment tasks
+ 
+Create one R script called run_analysis.R that does the following:
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -26,15 +28,15 @@ This repository contains the following files submitted for this project:
 
 1. A script file called 'run_Analysis.R' which contains the code that performs the analysis
 2. A data file called 'tidyData.txt' which contains the tidy data set as described in Point 5 of the Assignment
-3. A data file called 'dataSet.txt' which contains the extracted data as described in Points 1-4 of the Assignment
+3. A data file called 'dataSet.txt' which contains the cleaned data as described in Points 1-4 of the Assignment
 4. A file called 'CodeBook.md' that describes the variables, the data, and the work performed to clean up the data
 5. A file called 'ReadMe.md' that explains the assignment submission and how the script works.
 
 ---
 
-## run_Analysis.R Description
+## Description of Script
 
-The script performs the following tasks in sequential order:
+The script 'run_Analysis.R' performs the following tasks in sequential order:
 
 1. Check if data files exist in current working directory. If the data files do no exist, download and unzip all the files to the working directory
 2. Read the following data into R (if data frames already exist in global environment, do not read them again):

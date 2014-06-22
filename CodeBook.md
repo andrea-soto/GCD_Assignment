@@ -1,15 +1,12 @@
 ## Code Book
 
-This Code Book is part of the Getting and Cleaning Data Course Projec submission.
-
-It describes the variables, data, and work performed to clean up the data and create the final 'tidyData.txt' file.
+This Code Book is part of the Getting and Cleaning Data Course Projec submission. It describes the variables, data, and work performed to clean up the data and create the final 'tidyData.txt' file.
 
 ---
 
 ## The Raw Data Set
 
 The raw data was distributed in 6 files as following:
-
 * X_test.txt 		- Contains the measurments of the test group
 * X_train.txt 		- Contains the measurments of the training group
 * y_test.txt 		- Contains the Activity ID of the test group 
@@ -21,7 +18,7 @@ The description of the activities is contained in the file 'activity_labels.txt'
 
 ---
 
-## Cleaned Data Set
+## The Cleaned Data Set
 
 The cleaned data set is found in the file 'dataSet.txt'. This file is created with the 'run_Analysis.R' scrip and is used to create the final 'tidyData.txt' file.
 
@@ -36,18 +33,18 @@ The following operatins were performed to the raw data to obtain the cleaned dat
 Number of Rows:		10,299
 Number of Columns:	68
 
-Columns 1 to 66 
+Columns 1 to 66
  Formant: Numeric
  Content: Mean and standard deviation of 33 measured variables.
-Column 67 
+Column 67
  Format:  Character
  Content: Activity description. There are 6 possible activities:
-	* LAYING
-	* SITTING
-	* STANDING
-	* WALKING
-	* WALKING_DOWNSTAIRS
-	* WALKING_UPSTAIRS
+ * LAYING
+ * SITTING
+ * STANDING
+ * WALKING
+ * WALKING_DOWNSTAIRS
+ * WALKING_UPSTAIRS
 Column 68 
  Format:  Numeric
  Content: Subject identifier from 1 to 30.
@@ -73,12 +70,12 @@ Column 1
 Column 2 
  Format:  Character
  Content: Activity description. There are 6 possible activities:
-	* LAYING
-	* SITTING
-	* STANDING
-	* WALKING
-	* WALKING_DOWNSTAIRS
-	* WALKING_UPSTAIRS
+ * LAYING
+ * SITTING
+ * STANDING
+ * WALKING
+ * WALKING_DOWNSTAIRS
+ * WALKING_UPSTAIRS
 Columns 3 to 68
  Formant: Numeric
  Content: Average of the mean and standard deviation of 33 measured variables.
